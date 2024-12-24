@@ -1,0 +1,26 @@
+[2024-12-11 03:04:20 UTC] Step data_ingestion_step has started.
+
+[2024-12-11 03:04:20 UTC] Failed to run step data_ingestion_step after 1 retries. Exiting.
+
+[2024-12-11 03:04:20 UTC] name 'extracted_filles' is not defined
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\zenml\orchestrators\step_launcher.py", line 259, in launch
+    self._run_step(
+  File "C:\Python312\Lib\site-packages\zenml\orchestrators\step_launcher.py", line 381, in _run_step
+    self._run_step_without_step_operator(
+  File "C:\Python312\Lib\site-packages\zenml\orchestrators\step_launcher.py", line 466, in _run_step_without_step_operator
+    runner.run(
+  File "C:\Python312\Lib\site-packages\zenml\orchestrators\step_runner.py", line 187, in run
+    return_values = step_instance.call_entrypoint(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\zenml\steps\base_step.py", line 554, in call_entrypoint
+    return self.entrypoint(**validated_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Keerthi\Documents\AiMlasingh\steps\data_ingestion_step.py", line 19, in data_ingestion_step
+    df=data_ingestor.ingest(file_path)
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Keerthi\Documents\AiMlasingh\src\ingest_data.py", line 29, in ingest
+    csv_files=[f for f in extracted_filles if f.endswith(".csv")]
+                          ^^^^^^^^^^^^^^^^
+NameError: name 'extracted_filles' is not defined. Did you mean: 'extracted_files'?
+

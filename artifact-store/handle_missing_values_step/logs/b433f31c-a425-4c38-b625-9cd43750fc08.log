@@ -1,0 +1,10 @@
+[2024-12-11 03:34:27 UTC] Step handle_missing_values_step has started.
+
+[2024-12-11 03:34:27 UTC] executing missing value handling stategy
+
+[2024-12-11 03:34:27 UTC] Dropping missing values with axis=mean
+
+[2024-12-11 03:34:27 UTC] Missing values filled.
+
+[2024-12-11 03:34:27 UTC] Step handle_missing_values_step has finished in 13.873s.
+

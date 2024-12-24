@@ -1,0 +1,38 @@
+[2024-12-10 17:23:20 UTC] Step load_data has started.
+
+[2024-12-10 17:23:20 UTC] Failed to run step load_data after 1 retries. Exiting.
+
+[2024-12-10 17:23:20 UTC] [Errno 2] No such file or directory: 'your_dataset.csv'
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\zenml\orchestrators\step_launcher.py", line 259, in launch
+    self._run_step(
+  File "C:\Python312\Lib\site-packages\zenml\orchestrators\step_launcher.py", line 381, in _run_step
+    self._run_step_without_step_operator(
+  File "C:\Python312\Lib\site-packages\zenml\orchestrators\step_launcher.py", line 466, in _run_step_without_step_operator
+    runner.run(
+  File "C:\Python312\Lib\site-packages\zenml\orchestrators\step_runner.py", line 187, in run
+    return_values = step_instance.call_entrypoint(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\zenml\steps\base_step.py", line 554, in call_entrypoint
+    return self.entrypoint(**validated_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Keerthi\Documents\AiMlasingh\verify_mlflow_integration.py", line 110, in load_data
+    data = pd.read_csv("your_dataset.csv")  # Replace with your dataset
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pandas\io\parsers\readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pandas\io\parsers\readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pandas\io\parsers\readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pandas\io\parsers\readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pandas\io\common.py", line 859, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'your_dataset.csv'
+

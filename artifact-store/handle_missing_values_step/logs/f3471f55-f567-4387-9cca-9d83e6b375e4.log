@@ -1,0 +1,31 @@
+[2024-12-11 03:09:01 UTC] Step handle_missing_values_step has started.
+
+[2024-12-11 03:09:01 UTC] executing missing value handling stategy
+
+[2024-12-11 03:09:01 UTC] Failed to run step handle_missing_values_step after 1 retries. Exiting.
+
+[2024-12-11 03:09:01 UTC] 'FillMissingValuesStrategy' object has no attribute 'axis'
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\zenml\orchestrators\step_launcher.py", line 259, in launch
+    self._run_step(
+  File "C:\Python312\Lib\site-packages\zenml\orchestrators\step_launcher.py", line 381, in _run_step
+    self._run_step_without_step_operator(
+  File "C:\Python312\Lib\site-packages\zenml\orchestrators\step_launcher.py", line 466, in _run_step_without_step_operator
+    runner.run(
+  File "C:\Python312\Lib\site-packages\zenml\orchestrators\step_runner.py", line 187, in run
+    return_values = step_instance.call_entrypoint(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\zenml\steps\base_step.py", line 554, in call_entrypoint
+    return self.entrypoint(**validated_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Keerthi\Documents\AiMlasingh\steps\handle_missing_values_step.py", line 34, in handle_missing_values_step
+    cleaned_df=handler.handle_missing_values(df)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Keerthi\Documents\AiMlasingh\src\handling_missing_values.py", line 133, in handle_missing_values
+    return self.strategy.handle(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Keerthi\Documents\AiMlasingh\src\handling_missing_values.py", line 78, in handle
+    logging.info(f"Dropping missing values with axis={self.axis}")
+                                                      ^^^^^^^^^
+AttributeError: 'FillMissingValuesStrategy' object has no attribute 'axis'
+

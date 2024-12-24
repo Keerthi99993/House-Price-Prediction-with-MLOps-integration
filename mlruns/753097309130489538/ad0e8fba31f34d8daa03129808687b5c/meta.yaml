@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Keerthi/Documents/AiMlasingh/mlruns/753097309130489538/ad0e8fba31f34d8daa03129808687b5c/artifacts
+end_time: 1733813162911
+entry_point_name: ''
+experiment_id: '753097309130489538'
+lifecycle_stage: active
+run_id: ad0e8fba31f34d8daa03129808687b5c
+run_name: Training and Evaluation
+run_uuid: ad0e8fba31f34d8daa03129808687b5c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733813162672
+status: 4
+tags: []
+user_id: Keerthi

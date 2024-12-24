@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/99beb56e1385402688e82df5aafb18c5/artifacts
+end_time: 1733831324277
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 99beb56e1385402688e82df5aafb18c5
+run_name: merciful-fawn-505
+run_uuid: 99beb56e1385402688e82df5aafb18c5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733831077348
+status: 4
+tags: []
+user_id: Keerthi
